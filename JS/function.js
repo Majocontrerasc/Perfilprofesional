@@ -93,3 +93,85 @@ Swal.fire({
     title: 'Respuesta:',
     html: respuesta
 });
+
+//###OPERADORES LOGICOS Y ESTRUCTURAS CONDICIONALES(inverse,)
+// AND && con if
+var bool = false;
+var numeric = "7";
+if(!bool && numeric === "7"){ // bool == true; el triple igual compara el valor y el tipo de dato
+    console.log("ENTRA IF");
+
+} else{
+    console.log("ENTRA ELSE");
+}
+// OR || xon un if 
+var age = 31;
+if(age == 32 || numeric === "7"){
+    console.log("Entra if");
+    age+=2;
+} else{
+    console.log("Entra else");
+    age-=2;
+}
+console.log(age);
+
+// FOR
+console.log(array_text.length);//identifica el largo del array en todos los lenguajes
+for(let i = 0; i<array_text.length; i++){
+    console.log(array_text[i] +" " + (i+1));
+}
+
+//WHILE
+let posicion = 0;
+while (posicion<array_text.length){
+    console.log(array_text[posicion]+(posicion+1));
+    posicion++;
+}
+// DO WHILE
+let w = 0;
+do{
+    console.log(array_text[w]+(w+1));
+    w++;
+} while(w<array_text.length);
+
+// ####EVENTOS Y FUNCIONES
+function load_page(){
+    // ejm();
+    // ejm2();
+}
+
+function ejm(){
+    alert("Bienvenido");
+}
+function ejm2(){
+    alert("Bienvenido dos")
+}
+function box_onblur(){
+    const box_onblur = document.querySelector("#box_onblur");
+    if(box_onblur.value.length<=2){
+        alert("PROBLEMAS CON EL TEXTO");
+    }
+}
+const btn_changeColor = document.querySelector("#change_color");
+btn_changeColor.addEventListener("click", () => {
+    document.body.style.backgroundColor = "red";
+    document.body.style.color = "#fff";
+});
+
+const form       = document.getElementById("#form_register");
+const nombres    = document.getElementById("#form_register");
+const apellidos  = document.getElementById("#form_register");
+const validation = document.getElementById("#form_register");
+
+form.addEventListener("sumbit", name_event => {
+    name_event.preventDefault();
+    let info = "";
+    if(nombres.value.length<=2 || apellidos.value.length<=2){
+        info += "Nombres o apellidos incorrectos"
+        validation.style.color = "red"
+    } else{
+        info += "Su nombre es: " + nombres + " " + apellidos.value;
+        validation.style.color = "green"
+    }
+    validation.innerText = info;
+});
