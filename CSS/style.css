@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-body{
-    font-family: 'Roboto', sans-serif;
-}
-:root{
-    --padding-container:100px 0;
-    --color-title:#001a49;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
+body{
+    font-family: 'Poppins', sans-serif;
 }
+
+:root{
+    --padding-container: 100px 0;
+    --color-title: #001a49;
+}
+
+/* front page */
+
 .container{
     width: 90%;
     max-width: 1200px;
@@ -14,6 +18,7 @@ body{
     overflow: hidden;
     padding: var(--padding-container);
 }
+
 .person{
     width: 100%;
     height: 100vh;
@@ -22,8 +27,9 @@ body{
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
-    color: #ffffff;
+    color: #fff;
 }
+
 .person::before{
     content: "";
     position: absolute;
@@ -31,22 +37,24 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image:linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../img/wilderduarte_frontpage.jpg');
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/wilderduarte_frontpage.jpg');
     background-size: cover;
     clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
     z-index: -1;
 }
+
+/* nav */
 .nav{
     --padding-container: 0;
     height: 100%;
     display: flex;
     align-items: center;
-
 }
+
 .nav_title{
     font-weight: 300;
-
 }
+
 .nav_link{
     margin-left: auto;
     padding: 0;
@@ -54,24 +62,23 @@ body{
     grid-auto-flow: column;
     grid-auto-columns: max-content;
     gap: 2em;
-
 }
+
 .nav_items{
     list-style: none;
-
 }
+
 .nav_links{
     color: #fff;
     text-decoration: none;
-
-
 }
-.nave_menu{
+
+.nav_menu{
     margin-left: auto;
     cursor: pointer;
     display: none;
-
 }
+
 .nav_img{
     display: block;
     width: 30px;
@@ -81,15 +88,59 @@ body{
     display: var(--color-title);
 }
 
+
+
+.nav_close{
+    display: var(--show, none);
+}
+
+/* person container */
+
+.person_container{
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.person_title{
+    font-size: 3rem;
+}
+
+.person_paragraph{
+    margin-bottom: 20px;
+}
+
+.btn{
+    display: inline-block;
+    background-color: #2091f9;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+/* about */
+
 .about{
     text-align: center;
 }
+
 .subtitle{
     color: var(--color-title);
     font-size: 2rem;
     margin-bottom: 25px;
-
 }
+
+.about_paragraph{
+    line-height: 1.7;
+}
+
 .about_main{
     padding-top: 80px;
     display: grid;
@@ -99,6 +150,7 @@ body{
     overflow: hidden;
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
 }
+
 .about_icons{
     display: grid;
     gap: 1em;
@@ -107,6 +159,7 @@ body{
     overflow: hidden;
     margin: 0 auto;
 }
+
 .about_icon{
     width: 40px;
 }
@@ -357,3 +410,5 @@ body{
 .footer_img{
     width: 30px;
 }
+
+
