@@ -6,7 +6,7 @@ body{
 
 :root{
     --padding-container: 100px 0;
-    --color-title: #001a49;
+    --color-title: #960247;
 }
 
 /* front page */
@@ -27,7 +27,7 @@ body{
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
-    color: #fff;
+    color: #ffffff;
 }
 
 .person::before{
@@ -37,7 +37,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/wilderduarte_frontpage.jpg');
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/FONDO.jpg');
     background-size: cover;
     clip-path: polygon(100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
     z-index: -1;
@@ -117,7 +117,7 @@ body{
 
 .btn{
     display: inline-block;
-    background-color: #2091f9;
+    background-color: #f7a4f7;
     justify-self: center;
     color: #fff;
     text-decoration: none;
@@ -142,6 +142,7 @@ body{
 }
 
 .about_main{
+    background-color: #f7f0f1;
     padding-top: 80px;
     display: grid;
     width: 90%;
@@ -167,8 +168,8 @@ body{
 /* options */
 
 .options{
-    background-color: #e5e5f7;
-    background-image: linear-gradient(#444cf7 0.5px, transparente 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-color: #ffddff;
+    background-image: linear-gradient(#cd44f7 0.5px, transparente 0.5px), radial-gradient(#e797e7 0.5px, #e5e5f7 0.5px);
     background-size: cover;
     background-position: 0 0, 10px 10px;
     overflow: hidden;
@@ -182,7 +183,9 @@ body{
 }
 
 .options_picture{
-    max-width: 500px;
+    width: 450px;
+    height: 450px;
+
 }
 
 .options_paragraph{
@@ -191,8 +194,12 @@ body{
 }
 
 .options_img{
-    width: 100%;
-    display: block;
+    
+    width: 450px;
+    height: 450px;
+    border-radius: 40%;
+    object-fit: cover;
+    object-position: 50% 30%;
 }
 
 /* testimonys */
@@ -239,7 +246,7 @@ body{
 }
 
 .testimony_course{
-    background-color: royalblue;
+    background-color: #f7a4f7;
     color: #fff;
     display: inline-block;
     padding: 5px;
@@ -254,7 +261,7 @@ body{
 
 .questions{
     text-align: center;
-    background-color: #e5e5f7;
+    background-color: #ffddff;
 }
 
 .questions_container{
@@ -267,7 +274,7 @@ body{
 .questions_padding{
     padding: 0;
     transition: padding .3s;
-    border: 1px solid #5454D4;
+    border: 1px solid #f7a4f7;
     border-radius: 6px;
 }
 
@@ -326,7 +333,7 @@ body{
 /* footer */
 
 .footer {
-    background-color: #1d293f;
+    background-color:#960247;
 }
 
 .footer_title{
@@ -385,7 +392,7 @@ body{
     display: inline-block;
     height: 50px;
     padding: 0 20px;
-    background-color: #2091f9;
+    background-color: #f861f8;
     border: none;
     font-size: 1rem;
     color: #fff;
